@@ -19,15 +19,13 @@ export default class Animation {
             }
             self._tl.play()
                 .to(self._planets, {
-                    duration: 1,
                     scale: 0.3,
                     yoyo: true,
                     repeat: -1,
                     id: "scaleStagger",
                     stagger: {
-                        each: 0.3,
-                        from: "start",
-                        yoyo: true,
+                        each: 0.1,
+                        from: "start",                  
                     }
                 });
         });
@@ -41,7 +39,7 @@ export default class Animation {
                 .to(self._planets, {
                     id: "positionStagger",
                     stagger: {
-                        each: 0.3,
+                        each: 0.1,
                         from: "start",
                         y: 10,
                         yoyo: true,
